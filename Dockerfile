@@ -1,0 +1,6 @@
+FROM nginx:alpine
+ARG ROOT_ELEMENTS=src/
+ENV DOCUMENTROOT=${ROOT_ELEMENTS}
+WORKDIR /usr/share/nginx/html
+COPY ${DOCUMENTROOT} .
+
